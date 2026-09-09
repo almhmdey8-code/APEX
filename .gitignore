@@ -1,0 +1,9 @@
+.env
+backend/.env
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+.idea/
+.vscode/
+*.log

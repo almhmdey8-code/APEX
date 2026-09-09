@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dev.flutter.flutter-gradle-plugin'
+}
+
+android {
+    namespace 'com.apex.store'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.apex.store'
+        minSdk 23
+        targetSdk 36
+        versionCode 6
+        versionName '1.0.0'
+    }
+
+    buildTypes {
+        release {
+            // Configure your upload keystore in android/key.properties before production release.
+            // This fallback allows the project to assemble in debug/testing environments only.
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
